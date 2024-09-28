@@ -23,6 +23,7 @@ public class Player : MonoBehaviour
          transform.position += transform.TransformDirection(Vector3.right*3.0f*Time.deltaTime);
        }
     }
+    private void Onid OnTriggerEnter(Collider other)
 
 }
 
