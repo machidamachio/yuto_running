@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class Player : MonoBehaviour
 {
     // Start is called before the first frame update
@@ -23,7 +23,23 @@ public class Player : MonoBehaviour
          transform.position += transform.TransformDirection(Vector3.right*3.0f*Time.deltaTime);
        }
     }
-    private void Onid OnTriggerEnter(Collider other)
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Stage1Goal"))
+        {
+           // Debug.Log("ステージ１のゴールを通過したよ");
+           SceneManager.LoadScene("Stage2");   //stage2のSceneに遷移する
+        }
+        if (other.CompareTag("Stage2Goal"))
+        {
+
+          SceneManager.LoadScene("Stage3");   //stage3のSceneに遷移する
+        }
+        if (other.CompareTag("Item"))
+        {
+          Destroy(other.gameObject);
+        }
+    }
 
 }
 
