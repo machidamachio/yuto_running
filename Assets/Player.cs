@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class Player : MonoBehaviour
 {
+    public static int scoreCount;
     // Start is called before the first frame update
     void Start()
     {
@@ -37,7 +38,13 @@ public class Player : MonoBehaviour
         }
         if (other.CompareTag("Item"))
         {
+          scoreCount++;
           Destroy(other.gameObject);
+        }
+        if (other.CompareTag("MissItem"))
+        {
+           scoreCount = scoreCount - 3;
+           Destroy(other.gameObject);
         }
     }
 

@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2680044260556969050}
   m_Layer: 0
   m_Name: Cube (1)
-  m_TagString: Untagged
+  m_TagString: MissItem
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -224,7 +224,7 @@ GameObject:
   - component: {fileID: 4213135390375092103}
   m_Layer: 0
   m_Name: Cube
-  m_TagString: Untagged
+  m_TagString: MissItem
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -328,7 +328,7 @@ GameObject:
   - component: {fileID: -3988560808809358096}
   m_Layer: 0
   m_Name: Missltem
-  m_TagString: Item
+  m_TagString: MissItem
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
