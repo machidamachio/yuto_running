@@ -23,6 +23,10 @@ public class Player : MonoBehaviour
        {
          transform.position += transform.TransformDirection(Vector3.right*3.0f*Time.deltaTime);
        }
+        if(Input.GetKey(KeyCode.Space))
+        {
+          SceneManager.LoadScene("Stage1");
+        }
     }
     private void OnTriggerEnter(Collider other)
     {
@@ -46,6 +50,10 @@ public class Player : MonoBehaviour
            scoreCount = scoreCount - 3;
            Destroy(other.gameObject);
         }
+         if (other.CompareTag("Finish"))
+         {
+          SceneManager.LoadScene("Scenes/GameClear");
+         }
     }
 
 }
